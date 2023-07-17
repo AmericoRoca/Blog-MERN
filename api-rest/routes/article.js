@@ -24,6 +24,7 @@ router.get("/get-article/:id", articleController.getArticleById)
 router.delete("/delete-article/:id", articleController.deleteArticle)
 router.put("/update-article/:id", articleController.updateArticle)
 router.post("/upload-image/:id", [subidas.single("file")], articleController.uploadImage)
+router.get("/imagen/:file", articleController.imagen)
 
 
 

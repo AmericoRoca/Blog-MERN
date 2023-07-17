@@ -1,6 +1,7 @@
 const Article = require("../models/Article");
 const { validarArticulo }  = require('../helpers/validar')
 const fs = require("fs")
+const path = require("path")
 
 const saveArticle = async (req, res) => {
   let params = req.body;
@@ -198,17 +199,70 @@ const uploadImage = async(req,res) =>{
 
   } else {
 
-    return res.status(200).send({
-      message: "Method working",
-      files: req.file,
-      archivo_extension
-    });
+    let id = req.params.id;
+
+
+    try {
+  
+      let updatedArticle = await Article.findOneAndUpdate({_id: id}, {image: req.file.filename}, {new: true});
+  
+      if(!updateArticle){
+        return res.status(500).send({
+          status: "error",
+          message: "Error al actualizar",
+          
+        })
+      }
+  
+      return res.status(200).send({
+        message: "Article updated",
+        article: updatedArticle,
+        fichero: req.file.filename,
+        file: req.file
+  
+      });
+  
+  
+      
+    } catch (error) {
+      return res.status(404).send({
+        message: "Article not updated",
+        error: error
+  
+      })
+    }
+
+    
 
   }
 
 
-  //actualizar objeto
 
+}
+
+const imagen = async (req,res) =>{
+
+  let file = req.params.file;
+  let ruta = "./imagenes/articulos/"+file;
+
+  fs.stat(ruta, (error, exists) =>{
+
+    if(exists){
+      return res.sendFile(path.resolve(ruta));
+
+    } else {
+      return res.status(404).json({
+        status: "Error",
+        message: "Image doesn't exits",
+        exists,
+        file,
+        ruta
+        
+      });
+
+    }
+
+  });
 
 
 }
@@ -221,5 +275,6 @@ module.exports = {
   getArticleById,
   deleteArticle,
   updateArticle,
-  uploadImage
+  uploadImage,
+  imagen
 }
