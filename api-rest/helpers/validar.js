@@ -24,6 +24,7 @@ const validarArticulo = (res, params) =>{
   
 }
 
+
 module.exports = {
     validarArticulo
 }

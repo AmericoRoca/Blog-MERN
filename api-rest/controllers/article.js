@@ -1,10 +1,11 @@
 const Article = require("../models/Article");
 const { validarArticulo }  = require('../helpers/validar')
+const fs = require("fs")
 
 const saveArticle = async (req, res) => {
   let params = req.body;
 
-  validarArticulo(params);
+  validarArticulo(res,params);
 
   try {
     // Creating the article object
@@ -157,6 +158,61 @@ const updateArticle = async (req,res) =>{
 
 }
 
+const uploadImage = async(req,res) =>{
+
+  //configurar multer para la subida de archivos
+
+
+
+  //recoger fichero de imagen subido
+  if(!req.file && !req.files){
+    return res.status(404).send({
+      message: "Invalid request"
+     
+    });
+  }
+
+
+  //conseguir el nombre de la imagen
+  let archivo = req.file.originalname;
+
+
+  //conseguir extension
+  let archivo_split = archivo.split("\.");
+  let extension = archivo_split[1];
+
+  //comprobar extension correcta
+  if(extension != "png" && extension != "jpg" && extension != "jpeg" && extension != "gif"){
+
+    //Borrar archivo y dar respuesta
+    fs.unlink(req.file.path, (error) =>{
+
+      return res.status(400).send({
+        message: "Invalid extension"
+       
+      });
+
+    });
+
+
+
+  } else {
+
+    return res.status(200).send({
+      message: "Method working",
+      files: req.file,
+      archivo_extension
+    });
+
+  }
+
+
+  //actualizar objeto
+
+
+
+}
+
 
 
 module.exports = {
@@ -164,5 +220,6 @@ module.exports = {
   getArticles,
   getArticleById,
   deleteArticle,
-  updateArticle
+  updateArticle,
+  uploadImage
 }
