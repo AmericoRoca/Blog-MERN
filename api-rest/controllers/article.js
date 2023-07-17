@@ -74,7 +74,70 @@ const getArticles = async (req, res) => {
   }
 }
 
+const getArticleById = async (req,res) => {
+
+  const id = req.params.id;
+
+
+
+  try{
+   
+    const article = await Article.findById(id);
+
+    
+
+    if (!article) {
+      return res.status(404).json({
+        status: "Error",
+        mensaje: "No se ha encontrado el artículo",
+      });
+    }
+
+    return res.status(200).json({
+      status: "success",
+      article,
+    });
+
+     
+  } catch(error){
+    return res.status(404).json({
+      status: "Error",
+      mensaje: "No se ha encontrado el artículo",
+    });
+  }
+}
+
+const deleteArticle = async (req, res) =>{
+
+    const id = req.params.id;
+
+    try {
+
+      const articleDeleted = await Article.deleteOne({_id: id});
+
+      if(!articleDeleted){
+        return res.status(404).json({
+          status: "Error",
+          mensaje: "No se ha encontrado el artículo",
+        });
+      }
+
+      return res.status(200).json({
+        status: "success",
+        articleDeleted,
+      });
+      
+    } catch (error) {
+      return res.status(404).json({
+        status: "Error",
+        mensaje: "No se ha encontrado el artículo",
+      });
+    }
+}
+
 module.exports = {
   saveArticle,
-  getArticles
+  getArticles,
+  getArticleById,
+  deleteArticle
 }
