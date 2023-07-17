@@ -113,7 +113,7 @@ const deleteArticle = async (req, res) =>{
 
     try {
 
-      const articleDeleted = await Article.deleteOne({_id: id});
+      const articleDeleted = await Article.findOneAndDelete({_id: id});
 
       if(!articleDeleted){
         return res.status(404).json({
@@ -124,7 +124,8 @@ const deleteArticle = async (req, res) =>{
 
       return res.status(200).json({
         status: "success",
-        articleDeleted,
+        article: articleDeleted,
+        mensaje: "Articulo borrado"
       });
       
     } catch (error) {
