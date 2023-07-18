@@ -10,6 +10,7 @@ export const Aside = () => {
                       <button>Buscar</button>
                   </form>
               </div>
+              {/*
               <div className="add">
                   <h3 className="title">Añadir pelicula</h3>
                   <form action="">
@@ -18,7 +19,7 @@ export const Aside = () => {
                       <input type="submit" value="Enviar"/>
                   </form>
               
-              </div>
+              </div>  */}
       </aside>
   )
 }
