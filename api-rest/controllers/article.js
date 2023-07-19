@@ -31,8 +31,7 @@ const saveArticle = async (req, res) => {
 };
 
 const getArticles = async (req, res) => {
-  
-    setTimeout(async() => {
+
       try {
 
         const articulos = await Article.find({}).sort({
@@ -61,7 +60,6 @@ const getArticles = async (req, res) => {
         });
       }
 
-    }, 5000);
 
     
 }
