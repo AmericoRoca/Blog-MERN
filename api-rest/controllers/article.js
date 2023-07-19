@@ -31,32 +31,39 @@ const saveArticle = async (req, res) => {
 };
 
 const getArticles = async (req, res) => {
-  try {
-    const articulos = await Article.find({}).sort({
-      date: -1
-    });
+  
+    setTimeout(async() => {
+      try {
 
-    if (!articulos || articulos.length === 0) {
-      return res.status(400).json({
-        status: "Error",
-        mensaje: "No se han encontrado artículos",
-      });
-    }
-
-    return res.status(200).json({
-      status: "success",
-      contador: articulos.length,
-      articulos
-
-    });
+        const articulos = await Article.find({}).sort({
+          date: -1
+        });
     
-  } catch (error) {
-    console.log(error);
-    return res.status(400).json({
-      status: "Error",
-      mensaje: "Ocurrió un error al obtener los artículos",
-    });
-  }
+        if (!articulos || articulos.length === 0) {
+          return res.status(400).json({
+            status: "Error",
+            mensaje: "No se han encontrado artículos",
+          });
+        }
+    
+        return res.status(200).json({
+          status: "success",
+          contador: articulos.length,
+          articulos
+    
+        });
+        
+      } catch (error) {
+        console.log(error);
+        return res.status(400).json({
+          status: "Error",
+          mensaje: "Ocurrió un error al obtener los artículos",
+        });
+      }
+
+    }, 5000);
+
+    
 }
 
 const getArticleById = async (req,res) => {
