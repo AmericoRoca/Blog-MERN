@@ -6,8 +6,8 @@ export const Aside = () => {
               <div className="search">
                   <h3>Buscador</h3>
                   <form>
-                      <input type="text"/>
-                      <button>Buscar</button>
+                      <input type="text" id='search_field'/>
+                      <button id='search'>Buscar</button>
                   </form>
               </div>
               {/*

@@ -19,6 +19,7 @@ export const RoutesBlog = () => {
         <NavBlog/>
 
         {/* CONTENT */}
+        <section id='content' className='content'>
         <Routes>
             <Route path='/' element={<IndexBlog/>}></Route>
             <Route path='/index' element={<IndexBlog/>}></Route>
@@ -28,7 +29,7 @@ export const RoutesBlog = () => {
             <Route path='/edit' element={<Edit/>}></Route>
             <Route path='/search' element={<SearchBar/>}></Route>
         </Routes>
-
+        </section>
 
         {/* ASIDE */}
         <Aside/>

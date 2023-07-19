@@ -98,13 +98,13 @@ body{
   background: #f6f7f9;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: initial;
   flex-grow: 1;
 }
 
-.peli-item{
+.articulo-item{
   flex-grow: 1;
   background: white;
   border-radius: 10px;
@@ -114,11 +114,54 @@ body{
   padding-bottom: 60px;
   padding-left: 25px;
   padding-right: 25px;
+  text-align: left;
+  display: flex;
+  max-height: 225px;
+}
+.articulo-item .mascara{
+  width: 20%;
 }
 
+.articulo-item .mascara img{
+  width: 100%;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.articulo-item h3{
+  font-size:  30px;
+}
+
+.articulo-item .edit{
+  margin-right: 20px;
+}
+
+.jumbo{
+  width: 85%;
+  padding: 55px;
+  padding-bottom: 75px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  margin: 25px auto;
+}
+
+.jumbo h1{
+  font-size: 35px;
+  color: #444;
+
+}
+
+.jumbo p {
+  display:block;
+  margin-bottom: 40px;
+}
+
+.button,
 button,
 input[type="submit"],
 input[type="button"]{
+  text-decoration: none;
   width: 100px;
   background: #0b70e1;
   color: white;
@@ -134,11 +177,11 @@ input[type="button"]{
   transition: all 300ms;
 }
 
-.peli-item .edit:hover{
+.articulo-item .edit:hover{
   background: #e77b00;
 }
 
-.peli-item .delete:hover{
+.articulo-item .delete:hover{
   background: #9b0202;
 }
 
@@ -149,6 +192,7 @@ input[type="button"]{
   background: #f6f7f9;
   border-left: 1px solid #ddd;
   padding: 20px;
+  min-height: 490px;
 }
 
 .lateral > div{
@@ -190,18 +234,18 @@ input[type="button"]{
 /*ESTILOS PARA EL PIE DE PÁGINA*/
 .footer{
   grid-area: footer;
-
   background: #d1defa;
   color: #454545;
   border-top: 1px solid white;
-  text-align: left;
+  text-align: center;
   line-height: 68px;
   padding-left: 25px;
+ 
 }
 
 .footer a{
   color: #0b468a;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 @media (max-width: 1085px){
@@ -211,7 +255,7 @@ input[type="button"]{
       align-items: center;
   }
 
-  .peli-item{
+  .articulo-item{
       width: 80%;
   }
 }
