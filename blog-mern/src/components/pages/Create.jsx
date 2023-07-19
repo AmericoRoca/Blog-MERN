@@ -9,6 +9,8 @@ export const Create = () => {
   const guardarArticulo = (e) =>{
     
     e.preventDefault();
+
+    //recoger datos del formulario
     let nuevoArticulo = JSON.stringify(formulario);
 
     console.log(nuevoArticulo);
