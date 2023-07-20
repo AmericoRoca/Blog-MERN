@@ -27,7 +27,12 @@ export const RoutesBlog = () => {
             <Route path='/article' element={<Article/>}></Route>
             <Route path='/create' element={<Create/>}></Route>
             <Route path='/edit' element={<Edit/>}></Route>
-            <Route path='/search' element={<SearchBar/>}></Route>
+            <Route path='/search/:busqueda' element={<SearchBar/>}></Route>
+            <Route path='*' element={
+              <div className='jumbo'>
+                <h1>Error 404</h1>
+              </div>
+            }></Route>
         </Routes>
         </section>
 
