@@ -223,8 +223,8 @@ const uploadImage = async(req,res) =>{
         message: "Article updated",
         article: updatedArticle,
         fichero: req.file.filename,
-        file: req.file
-  
+        file: req.file,
+        status: "Success"
       });
   
   

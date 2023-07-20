@@ -1,4 +1,5 @@
 import React from 'react'
+import { Global } from '../../helpers/Global';
 
 export const Listado = ({articles, setArticles}) => {
 
@@ -9,7 +10,8 @@ export const Listado = ({articles, setArticles}) => {
         return (
           <article key={articulo._id} className="articulo-item">
             <div className="mascara">
-              <img src={articulo.image} />
+              { articulo.image === "default.png" && <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" />}
+              { articulo.image != "default.png" && <img src={Global.url+"imagen/"+articulo.image} />}
             </div>
             <div className="datos">
               <h3 className="title">{articulo.title}</h3>

@@ -16,18 +16,32 @@ export const Create = () => {
     //recoger datos del formulario
     let nuevoArticulo = formulario;
 
-    console.log(nuevoArticulo);
 
     //Guardar artículo en el backend
     const {datos, cargando} = await Peticion(Global.url+"save", "POST", nuevoArticulo);
-    console.log(datos)
+
 
     if(datos.status === "Success"){
 
       setResultado("guardado");
 
-      //subir la imagen 
-      const fileInput = document.querySelector("#file");
+
+    } else {
+      setResultado("error")
+
+
+    }
+
+    
+    //subir la imagen 
+    const fileInput = document.querySelector("#file");
+
+    if(datos.status === "Success" && fileInput.files[0]){
+
+
+
+      setResultado("guardado");
+
 
       //formData para mandar archivos
       const formData = new FormData();
@@ -36,15 +50,22 @@ export const Create = () => {
       //peticion
       const subida = await Peticion(Global.url+"upload-image/"+datos.article._id, "POST", formData, true);
 
-      console.log(subida.datos)
 
-    } else{
+      
+      if(subida.datos.status === "Success"){
 
-      setResultado("error");
+        setResultado("guardado");
 
-    }
 
-    console.log(datos);
+      } else {
+        setResultado("error")
+
+      }
+
+
+
+    } 
+
   }
 
 
