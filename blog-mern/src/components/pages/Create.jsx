@@ -20,6 +20,7 @@ export const Create = () => {
 
     //Guardar artículo en el backend
     const {datos, cargando} = await Peticion(Global.url+"save", "POST", nuevoArticulo);
+    console.log(datos)
 
     if(datos.status === "Success"){
 
@@ -28,8 +29,14 @@ export const Create = () => {
       //subir la imagen 
       const fileInput = document.querySelector("#file");
 
-      console.log(fileInput.files)
+      //formData para mandar archivos
+      const formData = new FormData();
+      formData.append('file', fileInput.files[0]);
 
+      //peticion
+      const subida = await Peticion(Global.url+"upload-image/"+datos.article._id, "POST", formData, true);
+
+      console.log(subida.datos)
 
     } else{
 
