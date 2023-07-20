@@ -14,11 +14,11 @@ export const Peticion = async (url, metodo, datosGuardar = "") => {
 
     if (metodo == "POST" || metodo == "PUT") {
         opciones = {
-        method: metodo,
-        body: JSON.stringify(datosGuardar),
-        headers: {
-            "Content-Type": "application/json",
-        },
+            method: metodo,
+            body: JSON.stringify(datosGuardar),
+            headers: {
+                "Content-Type": "application/json",
+            },
         };
     }
 

@@ -21,10 +21,20 @@ export const Create = () => {
     //Guardar artículo en el backend
     const {datos, cargando} = await Peticion(Global.url+"save", "POST", nuevoArticulo);
 
-    if(datos.status === "success"){
+    if(datos.status === "Success"){
+
       setResultado("guardado");
+
+      //subir la imagen 
+      const fileInput = document.querySelector("#file");
+
+      console.log(fileInput.files)
+
+
     } else{
+
       setResultado("error");
+
     }
 
     console.log(datos);
@@ -35,8 +45,8 @@ export const Create = () => {
     <div className='jumbo'>
       <h1>Crear articulo</h1>
 
-      <strong>{resultado == "guardado" ? "Articulo guardado con exito" : ""}</strong>
-      <strong>{resultado == "error" ? "Validación incorrecta!!" : ""}</strong>
+      <strong>{resultado === "guardado" ? "Articulo guardado con exito!!" : ""}</strong>
+      <strong>{resultado === "error" ? "Validación incorrecta!!" : ""}</strong>
       {/* Montar formulario */}
       <form className='formulario' onSubmit={guardarArticulo}>
 
