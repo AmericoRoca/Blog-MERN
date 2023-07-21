@@ -10,6 +10,7 @@ import { Header } from '../components/layout/Header'
 import { NavBlog } from '../components/layout/NavBlog'
 import { Aside } from '../components/layout/Aside'
 import { Footer } from '../components/layout/Footer'
+import { Contact } from '../components/pages/Contact'
 
 export const RoutesBlog = () => {
   return (
@@ -24,10 +25,16 @@ export const RoutesBlog = () => {
             <Route path='/' element={<IndexBlog/>}></Route>
             <Route path='/index' element={<IndexBlog/>}></Route>
             <Route path='/articles' element={<Articles/>}></Route>
-            <Route path='/article' element={<Article/>}></Route>
+            <Route path='/article/:id' element={<Article/>}></Route>
             <Route path='/create' element={<Create/>}></Route>
-            <Route path='/edit' element={<Edit/>}></Route>
-            <Route path='/search' element={<SearchBar/>}></Route>
+            <Route path='/edit/:id' element={<Edit/>}></Route>
+            <Route path='/search/:busqueda' element={<SearchBar/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+            <Route path='*' element={
+              <div className='jumbo'>
+                <h1>Error 404</h1>
+              </div>
+            }></Route>
         </Routes>
         </section>
 

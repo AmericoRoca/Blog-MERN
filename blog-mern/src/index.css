@@ -132,6 +132,16 @@ body{
   font-size:  30px;
 }
 
+.articulo-item h3 a{
+  text-decoration: none;
+  color: black;
+}
+
+.articulo-item h3 a:hover{
+  text-decoration: none;
+  color: blue;
+}
+
 .articulo-item .edit{
   margin-right: 20px;
 }
@@ -157,10 +167,26 @@ body{
   margin-bottom: 40px;
 }
 
+.jumbo .mascara{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.form-group .mascara{
+  width: 150px;
+}
+
+.form-group .mascara img{
+  width: 150px;
+  margin-top: 20px;
+}
+
 .button,
 button,
 input[type="submit"],
-input[type="button"]{
+input[type="button"],
+.edit{
   text-decoration: none;
   width: 100px;
   background: #0b70e1;
@@ -206,12 +232,9 @@ input[type="button"]{
   box-shadow: 0px 0px 6px #ddd;
 }
 
-.lateral input[type="text"],
-.lateral input[type="text"],
-.lateral textarea,
-.edit_form input[type="text"],
-.edit_form input[type="text"],
-.edit_form textarea
+
+input[type="text"],
+input[type="textarea"]
 {
   display: block;
   margin: 0 auto;
@@ -226,9 +249,33 @@ input[type="button"]{
   border-color: transparent;
 }
 
+.form-group input[type="text"],
+input[type="textarea"],
+input[type="file"]
+{
+  border: 1px solid #ddd;
+  outline: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .edit_form{
   border-top: 1px solid #ddd;
   margin-top: 10px;
+}
+
+.form-group{
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.form-group label{
+  display: block;
+  text-align: left;
+  color: #444;
+  margin-bottom: 7px;
 }
 
 /*ESTILOS PARA EL PIE DE PÁGINA*/
