@@ -24,7 +24,7 @@ export const RoutesBlog = () => {
             <Route path='/' element={<IndexBlog/>}></Route>
             <Route path='/index' element={<IndexBlog/>}></Route>
             <Route path='/articles' element={<Articles/>}></Route>
-            <Route path='/article' element={<Article/>}></Route>
+            <Route path='/article/:id' element={<Article/>}></Route>
             <Route path='/create' element={<Create/>}></Route>
             <Route path='/edit' element={<Edit/>}></Route>
             <Route path='/search/:busqueda' element={<SearchBar/>}></Route>

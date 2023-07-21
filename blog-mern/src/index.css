@@ -132,6 +132,16 @@ body{
   font-size:  30px;
 }
 
+.articulo-item h3 a{
+  text-decoration: none;
+  color: black;
+}
+
+.articulo-item h3 a:hover{
+  text-decoration: none;
+  color: blue;
+}
+
 .articulo-item .edit{
   margin-right: 20px;
 }
