@@ -27,7 +27,7 @@ body{
 .header{
   grid-area: header;
   
-  background: white;
+  background: linear-gradient(to right, black,#454545);
   text-align: left;
   font-style: italic;
 
@@ -35,34 +35,23 @@ body{
   justify-content: center;
 }
 
-.logo{
-  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
-  width: 40px;
-  height: 40px;
+.logo-mern{
+  width: 10%;
+  height: 10%;
   border-radius: 300px;
-  margin-top: 30px;
+  margin-top: 20px;
+  align-items: center;
 }
 
-.play{
-  width: 0;
-  height: 0;
-  margin-top: 15px;
-  margin-left: 16px;
-  border-left: 12px solid white;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-}
-
-.header h1{
-  margin-left: 15px;
-  margin-top: 30px;
+.logo-mern img{
+  width: 250px;
 }
 
 /*ESTILOS DE LA BARRA DE NAVEGACIÓN*/
 
 .nav{
   grid-area: nav;
-  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+  background: linear-gradient(to right, black,#454545);
 }
 
 .nav > ul {
@@ -88,14 +77,15 @@ body{
 }
 
 .nav a:hover{
-  transform: scale(1.1, 1.1);
+  text-decoration: underline;
+  
 }
 
 /*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
 
 .content{
   grid-area: content;
-  background: #f6f7f9;
+  background: gray;
 
   display: flex;
   flex-flow: column wrap;
@@ -106,7 +96,7 @@ body{
 
 .articulo-item{
   flex-grow: 1;
-  background: white;
+  background: linear-gradient(to right, black,#454545);
   border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
   margin: 20px;
@@ -117,7 +107,9 @@ body{
   text-align: left;
   display: flex;
   max-height: 225px;
+  cursor: pointer;
 }
+
 .articulo-item .mascara{
   width: 20%;
 }
@@ -130,16 +122,19 @@ body{
 
 .articulo-item h3{
   font-size:  30px;
+  color: white;
+}
+.articulo-item p{
+  color: white;
 }
 
 .articulo-item h3 a{
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .articulo-item h3 a:hover{
-  text-decoration: none;
-  color: blue;
+  text-decoration: underline;
 }
 
 .articulo-item .edit{
@@ -150,21 +145,34 @@ body{
   width: 85%;
   padding: 55px;
   padding-bottom: 75px;
-  background-color: white;
+  background: linear-gradient(to right, black,#454545);
   border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
   margin: 25px auto;
+  cursor: pointer;
+  align-items: center;
 }
 
 .jumbo h1{
   font-size: 35px;
-  color: #444;
+  color: white;
+
+}
+
+.jumbo h2{
+  font-size: 20px;
+  color: white;
 
 }
 
 .jumbo p {
   display:block;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 35px;
+  width: 80%;
+  text-align: center;
+  margin-left: 150px;
 }
 
 .jumbo .mascara{
@@ -189,12 +197,12 @@ input[type="button"],
 .edit{
   text-decoration: none;
   width: 100px;
-  background: #0b70e1;
+  background: linear-gradient(to right, black,#454545);
+  border: 1px solid white;
   color: white;
-  border: 0;
   outline: 0;
   padding:15px;
-  border-radius: 3px;
+  border-radius: 30px;
   margin-top:15px;
   text-transform: capitalize;
   font-size: 16px;
@@ -215,7 +223,7 @@ input[type="button"],
 
 .lateral{
   grid-area: lateral;
-  background: #f6f7f9;
+  background: #454545;
   border-left: 1px solid #ddd;
   padding: 20px;
   min-height: 490px;
@@ -227,9 +235,14 @@ input[type="button"],
   margin: 20px;
   padding: 20px;
   padding-top: 10px;
-  background: white;
+  background: linear-gradient(to right, black,#454545);
   border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
+  cursor: pointer;
+}
+
+.lateral h3{
+  color: white;
 }
 
 
@@ -241,8 +254,8 @@ input[type="textarea"]
   margin-top: 15px;
   padding: 12px;
   border-radius: 5px;
-  background: #f6f7f9;
-  color: #454545;
+  background: #454545;
+  color: white;
   width: 80%;
   opacity: 4;
   outline: 0;
@@ -281,8 +294,8 @@ input[type="file"]
 /*ESTILOS PARA EL PIE DE PÁGINA*/
 .footer{
   grid-area: footer;
-  background: #d1defa;
-  color: #454545;
+  background: linear-gradient(to right, black,#454545);
+  color: white;
   border-top: 1px solid white;
   text-align: center;
   line-height: 68px;
@@ -291,7 +304,7 @@ input[type="file"]
 }
 
 .footer a{
-  color: #0b468a;
+  color: white;
   text-decoration: underline;
 }
 
