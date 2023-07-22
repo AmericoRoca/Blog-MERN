@@ -32,12 +32,12 @@ export const Article = () => {
   return (
     <>
       {cargando ? (
-        "Cargando..."
+        "Loading..."
       ) : (
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" />
+              <img src="src/assets/Group1.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />

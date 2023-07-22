@@ -47,7 +47,9 @@ export const SearchBar = () => {
           articles={articles}
           setArticles={setArticles}/>
       ) : (
-        <h1>No hay articulos</h1>
+        <div className="jumbo">
+          <h1>There is no articles</h1>
+        </div>
       )}
     </>
   );

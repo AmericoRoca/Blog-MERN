@@ -113,7 +113,7 @@ export const Edit = () => {
 
   return (
     <div className='jumbo'>
-      <h1>Editar articulo: {article.title}</h1>
+      <h1>Edit article: {article.title}</h1>
 
       <strong>{resultado === "guardado" ? "Articulo guardado con exito!!" : ""}</strong>
       <strong>{resultado === "error" ? "Validación incorrecta!!" : ""}</strong>
@@ -121,17 +121,17 @@ export const Edit = () => {
       <form className='formulario' onSubmit={editarArticulo}>
 
         <div className='form-group'>
-          <label htmlFor='title'>Titulo</label>
+          <label htmlFor='title'>Title</label>
           <input type='text' name='title' onChange={cambiado} defaultValue={article.title}/>
         </div>
 
         <div className='form-group'>
-          <label htmlFor='content'>Contenido</label>
+          <label htmlFor='content'>Content</label>
           <input type='textarea' name='content' onChange={cambiado} defaultValue={article.content}/>
         </div>
 
         <div className='form-group'>
-          <label htmlFor='file'>Imagen</label>
+          <label htmlFor='file'>Image</label>
           <div className="mascara">
             {article.image === "default.png" && (
               <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" />
@@ -143,7 +143,7 @@ export const Edit = () => {
           <input type='file' name='file' id='file' />
         </div>
 
-        <input type='submit' value="guardar" className='btn btn-success'/>
+        <input type='submit' value="Save" className='btn btn-success'/>
 
 
       </form>

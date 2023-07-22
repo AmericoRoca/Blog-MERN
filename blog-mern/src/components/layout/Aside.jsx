@@ -17,10 +17,10 @@ export const Aside = () => {
   return (
       <aside className="lateral">
               <div className="search">
-                  <h3>Buscador de artículos</h3>
+                  <h3>Search bar</h3>
                   <form onSubmit={busqueda}>
                       <input type="text" name='search_field'/>
-                      <input type="submit" id='search' value="Buscar" />
+                      <input type="submit" id='search' value="Search" className='button'/>
                   </form>
               </div>
       </aside>

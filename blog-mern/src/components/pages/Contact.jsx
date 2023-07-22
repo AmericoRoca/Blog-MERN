@@ -1,13 +1,14 @@
 import React from 'react'
 
+
 export const Contact = () => {
   return (
     <div className='jumbo'>
-        <h1>Contacto</h1>
-        <hr />
-        <h2>Americo Roca</h2>
-        <h2>Fullstack developer</h2>
-        <h2>Ámsterdam</h2>
+        <h1>Contact</h1>
+        <h3 className='contact-box'>Americo Roca</h3>
+        <h3 className='contact-box'>Fullstack developer</h3>
+        <h3 className='contact-box'>Ámsterdam</h3>
+        <h3>Visit my website to get more info, feel free to contact me!</h3>
         <a href="https://www.americoroca.com" target='blank'>www.americoroca.com</a>
     </div>
   )
