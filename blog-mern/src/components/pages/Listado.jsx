@@ -24,7 +24,7 @@ export const Listado = ({articles, setArticles}) => {
         return (
           <article key={articulo._id} className="articulo-item">
             <div className="mascara">
-              { articulo.image === "default.png" && <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" />}
+              { articulo.image === "default.png" && <img src="src/assets/Group1.png" />}
               { articulo.image != "default.png" && <img src={Global.url+"imagen/"+articulo.image} />}
             </div>
             <div className="datos">
