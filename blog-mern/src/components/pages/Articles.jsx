@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Global } from "../../helpers/Global";
 import { Peticion } from "../../helpers/Peticion";
 import { Listado } from "./Listado";
+import { Link } from "react-router-dom";
 
 export const Articles = () => {
 
@@ -39,7 +40,11 @@ export const Articles = () => {
           articles={articles}
           setArticles={setArticles}/>
       ) : (
-        <h1>No hay articulos</h1>
+        <div className="jumbo">
+          <h1>There is no articles</h1>
+          <img src="src/assets/cry.png" alt="" />
+          <h2>Go to <Link to="/create" className="link-link">Create article</Link> to add the first one</h2>
+        </div>
       )}
     </>
   );

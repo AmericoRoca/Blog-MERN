@@ -32,7 +32,7 @@ export const RoutesBlog = () => {
             <Route path='/contact' element={<Contact/>}></Route>
             <Route path='*' element={
               <div className='jumbo'>
-                <h1>Error 404</h1>
+                <img src="https://www.pngkey.com/png/detail/147-1473883_404-error-404-not-found-png.png" alt="" />
               </div>
             }></Route>
         </Routes>

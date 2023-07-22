@@ -2,7 +2,7 @@
 
 body{
   background: #d1defa;
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: "MiFuentePersonalizada", sans-serif;
   text-align: center;
   padding: 0px;
   margin: 0px;
@@ -126,11 +126,13 @@ body{
 }
 .articulo-item p{
   color: white;
+  margin-left: 30px;
 }
 
 .articulo-item h3 a{
   text-decoration: none;
   color: white;
+  margin-left: 30px;
 }
 
 .articulo-item h3 a:hover{
@@ -139,6 +141,7 @@ body{
 
 .articulo-item .edit{
   margin-right: 20px;
+  margin-left: 30px;
 }
 
 .jumbo{
@@ -160,7 +163,7 @@ body{
 }
 
 .jumbo h2{
-  font-size: 20px;
+  font-size: 30px;
   color: white;
 
 }
@@ -169,7 +172,7 @@ body{
   display:block;
   margin-bottom: 50px;
   color: white;
-  font-size: 35px;
+  font-size: 20px;
   width: 80%;
   text-align: center;
   margin-left: 150px;
@@ -250,9 +253,27 @@ input[type="button"],
   color: white;
 }
 
+.link-link{
+  text-decoration: underline;
+}
+.strong-good
+{
+  color: green;
+  margin-bottom: 15px;
+}
 
+.strong-bad
+{
+  color: red;
+  margin-bottom: 15px;
+}
+
+h3{
+  color: white;
+}
 input[type="text"],
-input[type="textarea"]
+input[type="textarea"],
+input[type="file"]
 {
   display: block;
   margin: 0 auto;
@@ -322,6 +343,7 @@ input[type="file"]
   color: white;
   text-decoration: none;
 }
+
 
 @media (max-width: 1085px){
   .content {

@@ -71,29 +71,31 @@ export const Create = () => {
 
   return (
     <div className='jumbo'>
-      <h1>Crear articulo</h1>
+      <h1>Create Article</h1>
 
-      <strong>{resultado === "guardado" ? "Articulo guardado con exito!!" : ""}</strong>
-      <strong>{resultado === "error" ? "Validación incorrecta!!" : ""}</strong>
+      <strong className='strong-good'>{resultado === "guardado" ? "ARTICLE SAVED SUCCESSFULLY!!" : ""}</strong>
+      <strong className='strong-bad'>{resultado === "error" ? "INCORRECT VALIDATION!!" : ""}</strong>
       {/* Montar formulario */}
       <form className='formulario' onSubmit={guardarArticulo}>
 
+        <h3>Create your firts article by filling this form, be creative!</h3>
+
         <div className='form-group'>
-          <label htmlFor='title'>Titulo</label>
+          <label htmlFor='title'>Title</label>
           <input type='text' name='title' onChange={cambiado}/>
         </div>
 
         <div className='form-group'>
-          <label htmlFor='content'>Contenido</label>
+          <label htmlFor='content'>Content</label>
           <input type='textarea' name='content' onChange={cambiado}/>
         </div>
 
         <div className='form-group'>
-          <label htmlFor='file'>Imagen</label>
+          <label htmlFor='file'>Image</label>
           <input type='file' name='file' id='file' />
         </div>
 
-        <input type='submit' value="guardar" className='btn btn-success'/>
+        <input type='submit' value="Save" className='button'/>
 
 
       </form>
