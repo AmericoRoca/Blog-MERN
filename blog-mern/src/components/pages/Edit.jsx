@@ -134,7 +134,7 @@ export const Edit = () => {
           <label htmlFor='file'>Image</label>
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" />
+              <img src="https://drive.google.com/drive/u/0/my-drive" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />
