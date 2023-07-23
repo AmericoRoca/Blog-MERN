@@ -14,7 +14,13 @@ const app = express();
 const port = 3900;
 
 //Configure the cors
-app.use(cors());
+app.use(cors({
+    origin: [""],
+    methods: ["POST", "GET", "DELETE", "PUT"],
+    credentials: true
+}
+
+));
 
 //Read and convert the body to an js object
 app.use(express.json());
