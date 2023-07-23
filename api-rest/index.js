@@ -20,6 +20,10 @@ app.use(cors({
     credentials: true
 }));
 
+app.get("/", (req,res) =>{
+    res.json("Hello");
+})
+
 
 //Read and convert the body to an js object
 app.use(express.json());
