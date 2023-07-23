@@ -34,7 +34,7 @@ export const Articles = () => {
   return (
     <>
       {cargando ? (
-        "Cargando..."
+        <div className="jumbo">Loading..."</div>
       ) : articles.length >= 1 ? (
         <Listado
           articles={articles}
