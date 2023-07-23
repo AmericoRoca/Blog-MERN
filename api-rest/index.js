@@ -30,9 +30,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 //create routes
-const articleRoutes = require("./routes/article");
 
-app.use("/api", articleRoutes);
+
+
 
 //create server and listen request
 app.listen(port, () => {
