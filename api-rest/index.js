@@ -17,8 +17,7 @@ const port = 3900;
 app.use(cors({
     origin: "*",
     methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true,
-    optionsSuccessStatus: 200
+    credentials: true
 }));
 
 app.get("/", (req,res) =>{
