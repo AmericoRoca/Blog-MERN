@@ -22,6 +22,7 @@ export const Articles = () => {
       "GET"
     );
 
+
     //asignar datos
     if (datos.status === "success") {
       setArticles(datos.articulos);
@@ -42,7 +43,7 @@ export const Articles = () => {
       ) : (
         <div className="jumbo">
           <h1>There is no articles</h1>
-          <img src="https://drive.google.com/drive/u/0/my-drive" alt="" />
+          <img src="src/assets/media/cry.png" alt="cry-logo" />
           <h2>Go to <Link to="/create" className="link-link">Create article</Link> to add the first one</h2>
         </div>
       )}
