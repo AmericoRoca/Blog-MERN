@@ -17,7 +17,8 @@ const port = 3900;
 app.use(cors({
     origin: ["https://blog-mern-front-wheat.vercel.app/"],
     methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true
+    credentials: true,
+    mode: "no-cors"
 }));
 
 app.get("/", (req,res) =>{
