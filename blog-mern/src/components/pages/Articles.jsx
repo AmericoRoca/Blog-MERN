@@ -10,7 +10,6 @@ export const Articles = () => {
 
   const [articles, setArticles] = useState([]);
   const [cargando, setCargando] = useState(true);
-  const [datos, setDatos] = useState();
 
   useEffect(() => {
     getArticles();
@@ -18,14 +17,11 @@ export const Articles = () => {
 
   const getArticles = async () => {
 
-    /*const { datos, cargando } = await Peticion(
+    const { datos, cargando } = await Peticion(
       Global.url + "get-articles",
       "GET"
-    );*/
+    );
 
-    fetch("https://blog-mern-front-wheat.vercel.app/articles")
-      .then((response) => response.json())
-      .then((datos)=> setDatos(datos))
 
     //asignar datos
     if (datos.status === "success") {
