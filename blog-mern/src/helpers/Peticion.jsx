@@ -27,7 +27,7 @@ export const Peticion = async (url, metodo, datosGuardar = "", archivos = false)
                 method: metodo,
                 body: JSON.stringify(datosGuardar),
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
             };
         }

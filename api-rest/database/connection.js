@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connection = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/blog_mern", {
+    await mongoose.connect("mongodb+srv://blog_mern:blog_mern@blog-mern.n3lp1tx.mongodb.net/blog-mern?retryWrites=true&w=majority", {
       connectTimeoutMS: 5000, // Tiempo de espera de conexión de 5 segundos
       socketTimeoutMS: 30000 // Tiempo de espera de socket de 30 segundos
     });

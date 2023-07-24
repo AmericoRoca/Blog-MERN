@@ -34,7 +34,7 @@ export const Articles = () => {
   return (
     <>
       {cargando ? (
-        "Cargando..."
+        <div className="jumbo">Loading...</div>
       ) : articles.length >= 1 ? (
         <Listado
           articles={articles}
@@ -42,7 +42,7 @@ export const Articles = () => {
       ) : (
         <div className="jumbo">
           <h1>There is no articles</h1>
-          <img src="src/assets/cry.png" alt="" />
+          <img src="https://drive.google.com/drive/u/0/my-drive" alt="" />
           <h2>Go to <Link to="/create" className="link-link">Create article</Link> to add the first one</h2>
         </div>
       )}

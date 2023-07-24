@@ -37,7 +37,7 @@ export const Article = () => {
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="src/assets/Group1.png" />
+              <img src="https://drive.google.com/drive/u/0/my-drive" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />

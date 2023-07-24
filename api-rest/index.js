@@ -18,10 +18,12 @@ app.use(cors({
     origin: ["https://blog-mern-front-wheat.vercel.app/"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true
-}
+}));
 
+app.get("/", (req,res) =>{
+    res.json("Hello");
+})
 
-));
 
 //Read and convert the body to an js object
 app.use(express.json());
