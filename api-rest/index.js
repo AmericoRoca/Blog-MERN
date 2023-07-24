@@ -18,7 +18,7 @@ app.use(cors({
     origin: ["https://blog-mern-front-wheat.vercel.app/"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
-    mode: "no-cors"
+    optionsSuccessStatus: 200
 }));
 
 app.get("/", (req,res) =>{
