@@ -2,6 +2,7 @@ const Article = require("../models/Article");
 const { validarArticulo }  = require('../helpers/validar')
 const fs = require("fs")
 const path = require("path")
+const multer = require('multer');
 
 const saveArticle = async (req, res) => {
   let params = req.body;
@@ -167,7 +168,18 @@ const updateArticle = async (req,res) =>{
 const uploadImage = async(req,res) =>{
 
   //configurar multer para la subida de archivos
-
+  const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      // Aquí especificamos la carpeta donde se guardarán los archivos subidos.
+      // Puedes cambiar 'uploads/' por la ruta que desees.
+      cb(null, './imagenes/articulos');
+    },
+    filename: function (req, file, cb) {
+      // Aquí establecemos el nombre del archivo que se guardará.
+      // En este ejemplo, utilizamos el nombre original del archivo.
+      cb(null, file.originalname);
+    }
+  });
 
 
   //recoger fichero de imagen subido
