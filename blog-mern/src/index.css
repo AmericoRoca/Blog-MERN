@@ -148,6 +148,18 @@ body{
   margin-left: 30px;
 }
 
+.article-title{
+  color: white;
+}
+
+.article-date{
+  color: white;
+}
+
+.article-content{
+  color: white;
+}
+
 .jumbo{
   width: 85%;
   padding: 55px;
