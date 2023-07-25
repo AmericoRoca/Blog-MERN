@@ -37,7 +37,7 @@ export const Article = () => {
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" />
+              <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" className="img-article"/>
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />
@@ -46,7 +46,7 @@ export const Article = () => {
           <div className="datos">
             <h1 className="article-title">{article.title}</h1>
             <span className="article-date">{article.date}</span>
-            <p className="article-content">{article.content}</p>
+            <h2 className="article-content">{article.content}</h2>
           </div>
         </article>
       )}
