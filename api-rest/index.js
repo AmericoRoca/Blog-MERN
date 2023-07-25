@@ -20,10 +20,6 @@ app.use(cors({
     credentials: true
 }));
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-  });
 
 app.get("/", (req,res) =>{
     res.json("Hello");
