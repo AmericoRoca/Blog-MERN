@@ -17,7 +17,8 @@ const port = 3900;
 app.use(cors({
     origin: "*",
     methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 
