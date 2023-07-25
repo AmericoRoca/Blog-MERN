@@ -6,7 +6,7 @@ export const Header = () => {
 
         <header className="header">
           <div className='logo-mern'>
-            <a href='/index'><img src="https://github.com/AmericoRoca/Blog-MERN/blob/main/blog-mern/src/assets/media/logo.png" alt="logo-mearn-new"  className='logo-default'/></a>
+            <a href='/index'><img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" alt="logo-mearn-new"  className='logo-default'/></a>
           </div>
         </header>
 
