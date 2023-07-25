@@ -368,6 +368,9 @@ input[type="file"]
   text-decoration: none;
 }
 
+.link-contact{
+  text-decoration: underline;
+}
 
 @media (max-width: 1085px){
   .content {
