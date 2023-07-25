@@ -134,7 +134,7 @@ export const Edit = () => {
           <label htmlFor='file'>Image</label>
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="src/assets/media/logo.png" />
+              <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />
