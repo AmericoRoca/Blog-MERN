@@ -32,12 +32,12 @@ export const Article = () => {
   return (
     <>
       {cargando ? (
-        "Loading..."
+        <h2>"Loading..."</h2>
       ) : (
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://cursosdedesarrollo.com/wp-content/uploads/2019/11/react.svg" />
+              <img src="src/assets/media/logo.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />

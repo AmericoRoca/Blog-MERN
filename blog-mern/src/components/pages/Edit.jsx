@@ -134,7 +134,7 @@ export const Edit = () => {
           <label htmlFor='file'>Image</label>
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://cursosdedesarrollo.com/wp-content/uploads/2019/11/react.svg" />
+              <img src="src/assets/media/logo.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />

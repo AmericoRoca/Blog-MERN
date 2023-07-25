@@ -24,7 +24,7 @@ export const Listado = ({articles, setArticles}) => {
         return (
           <article key={articulo._id} className="articulo-item">
             <div className="mascara">
-              { articulo.image === "default.png" && <img src="https://cursosdedesarrollo.com/wp-content/uploads/2019/11/react.svg" className="listado-default"/>}
+              { articulo.image === "default.png" && <img src="src/assets/media/logo.png" className="listado-default"/>}
               { articulo.image != "default.png" && <img src={Global.url+"imagen/"+articulo.image} />}
             </div>
             <div className="datos">
