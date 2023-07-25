@@ -37,7 +37,7 @@ export const Article = () => {
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="src/assets/media/logo.png" />
+              <img src="https://cursosdedesarrollo.com/wp-content/uploads/2019/11/react.svg" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />
