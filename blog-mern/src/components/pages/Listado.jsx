@@ -24,8 +24,8 @@ export const Listado = ({articles, setArticles}) => {
         return (
           <article key={articulo._id} className="articulo-item">
             <div className="mascara">
-              { articulo.image === "default.png" && <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" />}
-              { articulo.image != "default.png" && <img src={Global.url+"imagen/"+articulo.image} />}
+              { articulo.image === "default.png" && <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" className='img-article'/>}
+              { articulo.image != "default.png" && <img src={Global.url+"imagen/"+articulo.image} className='img-article' />}
             </div>
             <div className="datos">
               <h3 className="title"><Link to={"/article/"+articulo._id}>{articulo.title}</Link></h3>
