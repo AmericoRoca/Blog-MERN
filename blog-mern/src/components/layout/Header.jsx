@@ -6,7 +6,7 @@ export const Header = () => {
 
         <header className="header">
           <div className='logo-mern'>
-            <a href='/index'><img src="../blog-mern/src/assets/media/logo.png" alt="logo-mearn-new"  className='logo-logo'/></a>
+            <a href='/index'><img src="https://cursosdedesarrollo.com/wp-content/uploads/2019/11/react.svg" alt="logo-mearn-new"  className='logo-logo'/></a>
           </div>
         </header>
 
