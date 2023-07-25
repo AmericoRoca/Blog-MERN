@@ -2,7 +2,6 @@ const Article = require("../models/Article");
 const { validarArticulo }  = require('../helpers/validar')
 const fs = require("fs")
 const path = require("path")
-const multer = require('multer');
 
 const saveArticle = async (req, res) => {
   let params = req.body;
@@ -168,8 +167,7 @@ const updateArticle = async (req,res) =>{
 const uploadImage = async(req,res) =>{
 
   //configurar multer para la subida de archivos
-  const storage = multer.memoryStorage(); // Almacenamiento en memoria (no en disco)
-  const upload = multer({ storage: storage });
+
 
 
   //recoger fichero de imagen subido
