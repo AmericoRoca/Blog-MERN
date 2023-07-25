@@ -44,7 +44,7 @@ export const Article = () => {
             )}
           </div>
           <div className="datos">
-            <h1 className="article-title">{article.title}</h1>
+            <h2 className="article-title">{article.title}</h2>
             <span className="article-date">{article.date}</span>
             <h2 className="article-content">{article.content}</h2>
           </div>
