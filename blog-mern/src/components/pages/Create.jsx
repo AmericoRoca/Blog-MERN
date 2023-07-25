@@ -92,7 +92,7 @@ export const Create = () => {
 
         <div className='form-group'>
           <label htmlFor='file'>Image</label>
-          <input type='file' name='file' id='file' />
+          <input type='file' name='file' id='file' disabled/>
         </div>
 
         <input type='submit' value="Save" className='button'/>

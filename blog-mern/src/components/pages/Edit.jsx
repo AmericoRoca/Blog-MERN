@@ -140,7 +140,7 @@ export const Edit = () => {
               <img src={Global.url + "imagen/" + article.image} />
             )}
           </div>
-          <input type='file' name='file' id='file' />
+          <input type='file' name='file' id='file' disabled/>
         </div>
 
         <input type='submit' value="Save" className='button'/>
