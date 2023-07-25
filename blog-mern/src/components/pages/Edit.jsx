@@ -143,7 +143,7 @@ export const Edit = () => {
           <input type='file' name='file' id='file' />
         </div>
 
-        <input type='submit' value="Save" className='btn btn-success'/>
+        <input type='submit' value="Save" className='button'/>
 
 
       </form>
