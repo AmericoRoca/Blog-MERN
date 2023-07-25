@@ -41,7 +41,7 @@ export const SearchBar = () => {
   return (
     <>
       {cargando ? (
-        "Cargando..."
+        <h2 className="loading">Loading...</h2>
       ) : articles.length >= 1 ? (
         <Listado
           articles={articles}

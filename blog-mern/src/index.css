@@ -160,6 +160,10 @@ body{
   color: white;
 }
 
+.loading{
+  color: white;
+}
+
 .jumbo{
   width: 85%;
   padding: 55px;

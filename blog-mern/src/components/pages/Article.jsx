@@ -32,7 +32,7 @@ export const Article = () => {
   return (
     <>
       {cargando ? (
-        <h2>"Loading..."</h2>
+        <h2 className="loading">"Loading..."</h2>
       ) : (
         <article key={article._id} className="articulo-item">
           <div className="mascara">
