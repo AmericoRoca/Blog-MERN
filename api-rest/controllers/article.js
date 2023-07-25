@@ -168,18 +168,8 @@ const updateArticle = async (req,res) =>{
 const uploadImage = async(req,res) =>{
 
   //configurar multer para la subida de archivos
-  const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      // Aquí especificamos la carpeta donde se guardarán los archivos subidos.
-      // Puedes cambiar 'uploads/' por la ruta que desees.
-      cb(null, './imagenes/articulos');
-    },
-    filename: function (req, file, cb) {
-      // Aquí establecemos el nombre del archivo que se guardará.
-      // En este ejemplo, utilizamos el nombre original del archivo.
-      cb(null, file.originalname);
-    }
-  });
+  const storage = multer.memoryStorage(); // Almacenamiento en memoria (no en disco)
+  const upload = multer({ storage: storage });
 
 
   //recoger fichero de imagen subido
