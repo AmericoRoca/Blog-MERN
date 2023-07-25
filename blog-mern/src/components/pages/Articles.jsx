@@ -43,7 +43,7 @@ export const Articles = () => {
       ) : (
         <div className="jumbo">
           <h1>There is no articles</h1>
-          <img src="src/assets/media/cry.png" alt="cry-logo" />
+          <img src="https://americoroca.com/wp-content/uploads/2023/07/cry-copia.png" alt="cry-logo" />
           <h2>Go to <Link to="/create" className="link-link">Create article</Link> to add the first one</h2>
         </div>
       )}

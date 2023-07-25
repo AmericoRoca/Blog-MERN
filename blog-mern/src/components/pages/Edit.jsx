@@ -115,8 +115,8 @@ export const Edit = () => {
     <div className='jumbo'>
       <h1>Edit article: {article.title}</h1>
 
-      <strong>{resultado === "guardado" ? "Articulo guardado con exito!!" : ""}</strong>
-      <strong>{resultado === "error" ? "Validación incorrecta!!" : ""}</strong>
+      <strong>{resultado === "guardado" ? "Article successfully saved!!" : ""}</strong>
+      <strong>{resultado === "error" ? "Incorrect validation!!" : ""}</strong>
       {/* Montar formulario */}
       <form className='formulario' onSubmit={editarArticulo}>
 
@@ -134,7 +134,7 @@ export const Edit = () => {
           <label htmlFor='file'>Image</label>
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://drive.google.com/drive/u/0/my-drive" />
+              <img src="src/assets/media/logo.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />

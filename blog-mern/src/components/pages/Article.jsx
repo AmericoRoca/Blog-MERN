@@ -32,21 +32,21 @@ export const Article = () => {
   return (
     <>
       {cargando ? (
-        "Loading..."
+        <h2>"Loading..."</h2>
       ) : (
         <article key={article._id} className="articulo-item">
           <div className="mascara">
             {article.image === "default.png" && (
-              <img src="https://drive.google.com/drive/u/0/my-drive" />
+              <img src="https://americoroca.com/wp-content/uploads/2023/07/logo-blog-copia.png" />
             )}
             {article.image != "default.png" && (
               <img src={Global.url + "imagen/" + article.image} />
             )}
           </div>
           <div className="datos">
-            <h1>{article.title}</h1>
-            <span>{article.date}</span>
-            <p>{article.content}</p>
+            <h1 className="article-title">{article.title}</h1>
+            <span className="date-title">{article.date}</span>
+            <p className="article-content">{article.content}</p>
           </div>
         </article>
       )}
