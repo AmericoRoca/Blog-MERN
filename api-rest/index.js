@@ -17,10 +17,6 @@ const port = 3900;
 app.use(cors({
 }));
 
-app.get("/test", (req,res) =>{
-    res.json("Hello");
-})
-
 
 //Read and convert the body to an js object
 app.use(express.json());

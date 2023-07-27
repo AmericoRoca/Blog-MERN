@@ -248,7 +248,7 @@ const uploadImage = async(req,res) =>{
 const imagen = async (req,res) =>{
 
   let file = req.params.file;
-  let ruta = "https://github.com/AmericoRoca/Blog-MERN/tree/main/api-rest/imagenes/articulos"+file;
+  let ruta = "./imagenes/articulos/"+file;
 
   fs.stat(ruta, (error, exists) =>{
 
