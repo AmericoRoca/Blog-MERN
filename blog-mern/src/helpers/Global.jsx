@@ -1,3 +1,3 @@
 export const Global = {
-    url: "https://blog-mern-api-six.vercel.app/api/"
+    url: "http://localhost:3900/api/"
   };
